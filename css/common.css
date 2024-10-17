@@ -21,7 +21,7 @@ button{border: none; background-color: initial; border-radius: 25px;}
 .script_s::before {display: block; font-family: "Splash"; text-transform: lowercase; font-size: 2em; color: rgba(50, 52, 252, 0.3); margin-bottom: -10px; margin-top: 30px;}
 * section .del_Tablet, * section .del_Moble {display: none;}
 .moreBut span {vertical-align: baseline; font-size: 1.5rem; display: inline-block; padding: 0 5px; margin: 20px auto 0; background: linear-gradient(0deg, #06E39F 40%, rgba(255,255,255,0) 0%);}
-.moreBut::after {width: 40px; height: 15px; margin-left: 10px; display: inline-block; content: ""; background: url(/images/moreBut.png) no-repeat; background-position: center;}
+.moreBut::after {width: 40px; height: 15px; margin-left: 10px; display: inline-block; content: ""; background: url(../images/moreBut.png) no-repeat; background-position: center;}
 .moreBut.fff::after {filter: invert(1);}
 
 
@@ -32,7 +32,7 @@ button{border: none; background-color: initial; border-radius: 25px;}
 #quick_section li:last-child{border-bottom: none;}
 #quick_section a{display: block; text-align: center; font-size: 1.3rem; padding: 5px; border-radius: 50px;}
 #quick_section a img{display: block; margin: 0 auto 5px;}
-#top_btn{font-size: 0; width: 100%; height: 88px; margin: 0 auto; background: url(/images/arrow_top.png) no-repeat center; background-size: contain; margin-top: 50px; cursor: pointer;}
+#top_btn{font-size: 0; width: 100%; height: 88px; margin: 0 auto; background: url(../images/arrow_top.png) no-repeat center; background-size: contain; margin-top: 50px; cursor: pointer;}
 
 
 /* header */
@@ -77,12 +77,12 @@ header .mgnb_wrap .close span:nth-of-type(2) { transform: translateY(-10px) rota
 #main_banner .numcount{position: absolute; z-index: 98; width: 145px; height: 45px; border-radius: 25px; background-color: rgba(0,0,0,0.8); bottom: 50px; left: 100px; color: #fff; text-align: center; padding: 15px;}
 
 #main_banner button.slick-arrow{position: absolute; z-index: 99; width: 15px; height: 20px; font-size: 0; background-repeat: no-repeat; background-size: contain; background-position: center;}
-#main_banner button.slick-prev{background-image: url(/images/arrow_prev.png); bottom: 61px; left: 125px;}
-#main_banner button.slick-next{background-image: url(/images/arrow_next.png); bottom: 62px; left: 205px;}
+#main_banner button.slick-prev{background-image: url(../images/arrow_prev.png); bottom: 61px; left: 125px;}
+#main_banner button.slick-next{background-image: url(../images/arrow_next.png); bottom: 62px; left: 205px;}
 
 
 /* main_edu */
-#main_edu{background-repeat: no-repeat; background-position: center; background-size: cover; background-image: url(/images/edubg1.jpg); padding: 130px 0 100px; transition: background-image 0.5s ease-in-out;}
+#main_edu{background-repeat: no-repeat; background-position: center; background-size: cover; background-image: url(../images/edubg1.jpg); padding: 130px 0 100px; transition: background-image 0.5s ease-in-out;}
 
 #main_edu .innerLong{display: flex; justify-content: space-between; align-items: center}
 .tab_set{flex-shrink: 0; width: 300px; text-align: center; margin-right: 30px;}
@@ -136,7 +136,7 @@ p.view_count{font-family: 'Gmarket_L'; right: 20px; margin-left: 10px; display: 
 #benefit div{margin-top: 30px;}
 #benefit div > img{width: 100%;}
 
-.mainTitle_Icon{padding-left: 140px; background: url(/images/gift.png) no-repeat; background-position: left bottom; background-size: 120px;}
+.mainTitle_Icon{padding-left: 140px; background: url(../images/gift.png) no-repeat; background-position: left bottom; background-size: 120px;}
 
 
 /* main_support */
@@ -150,16 +150,16 @@ article.jobSupport{}
 .jobSystem_wrap dl:nth-of-type(even) dt{background-color: #3234FC;}
 .jobSystem_wrap dl:nth-of-type(even) dt span{color: #3234FC;}
 
-.line_dot{width: 55px; margin: 0 1%; background:url(/images/dot.png) repeat-x center;}
+.line_dot{width: 55px; margin: 0 1%; background:url(../images/dot.png) repeat-x center;}
 
 article.jobCenter{text-align: center; margin-top: 50px; background: linear-gradient(0deg , transparent 300px, #C4A7FE 0);}
-article.jobCenter .innerShort{background-image: url(/images/counselor.png); background-repeat: no-repeat; background-position: 20px 120px;}
-.jobCenter_Icon{ display: inline-block; padding-right: 150px; padding-top: 70px; background: url(/images/jobbox.png) no-repeat; background-position: right top; background-size: 430px;     margin-bottom: 80px;}
+article.jobCenter .innerShort{background-image: url(../images/counselor.png); background-repeat: no-repeat; background-position: 20px 120px;}
+.jobCenter_Icon{ display: inline-block; padding-right: 150px; padding-top: 70px; background: url(../images/jobbox.png) no-repeat; background-position: right top; background-size: 430px;     margin-bottom: 80px;}
 .jobCenter_Icon h4, .jobCenter_Icon h1{display: inline; color: #fff; margin-left: 20px;}
 
 .jobCenter_call li{margin: 10px;}
 .jobCenter_call li a{font-size: 50px; font-family: 'Gmarket_B';}
-.jobCenter_call li a span{font-size: 22px; display: inline-block; width: 350px; height: auto; padding: 11px 20px 9px; border: 2px solid; border-radius: 25px; margin-right: 20px; padding-left: 50px; background:#fff url(/images/Phone.png) no-repeat left 20px center; }
+.jobCenter_call li a span{font-size: 22px; display: inline-block; width: 350px; height: auto; padding: 11px 20px 9px; border: 2px solid; border-radius: 25px; margin-right: 20px; padding-left: 50px; background:#fff url(../images/Phone.png) no-repeat left 20px center; }
 
 .jobCenter_call li:hover a span{ filter: invert(1);}
 
@@ -187,8 +187,8 @@ article.jobCenter .innerShort{background-image: url(/images/counselor.png); back
 
 .mapSet .maptext dd{ font-family: 'Pretendard-Regular';}
 .mapSet .maptext .mapLink a{display: inline-block; margin: 20px 30px 0px 0; padding: 10px 0 5px 45px; background-position: left bottom; background-repeat: no-repeat;}
-.mapSet .maptext .mapLink a.naver{background-image: url(/images/naver.png);  }
-.mapSet .maptext .mapLink a.kakao{background-image: url(/images/kakao.png); }
+.mapSet .maptext .mapLink a.naver{background-image: url(../images/naver.png);  }
+.mapSet .maptext .mapLink a.kakao{background-image: url(../images/kakao.png); }
 
 
 /* footer */
@@ -200,8 +200,8 @@ footer .f_campus dt{margin-bottom: 20px; font-family: 'Gmarket_M';}
 
 footer .f_campus dt::after{display: block; content: ""; width: 200px; height: 40px; background-repeat: no-repeat; background-size: contain; background-position: left center; filter: brightness(100);}
 
-footer .f_campus dt.campus_sm::after{background-image: url(/images/logo1.png);}
-footer .f_campus dt.campus_sy::after{background-image: url(/images/logo2.png);}
+footer .f_campus dt.campus_sm::after{background-image: url(../images/logo1.png);}
+footer .f_campus dt.campus_sy::after{background-image: url(../images/logo2.png);}
 
 
 footer .f_campus dd{font-size: 0.8rem; font-weight: 500; line-height: 1.5; }
