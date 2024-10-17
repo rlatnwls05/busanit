@@ -1,0 +1,53 @@
+@charset "utf-8";
+
+
+
+/* Pretendard */
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+/* G마켓 산스 */
+@font-face {
+    font-family: 'Gmarket_L';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Gmarket_M';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Gmarket_B';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+/* @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Splash&display=swap'); */
+
+/* Raleway */
+@font-face {
+    font-family: "Raleway";
+    src: url(/css/font/Raleway-VariableFont_wght.ttf);
+    font-weight: 500;
+    font-style: normal;
+  }
+
+
+/* Splash */
+@font-face {
+    font-family: "Splash";
+    src: url(/css/font/Splash-Regular.ttf);
+    font-weight: 400;
+    font-style: normal;
+  }
