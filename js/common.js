@@ -168,11 +168,11 @@ $(document).ready(function () {
       // 배경 이미지를 변경하는 함수
       function changeBackground(href) {
           var bgImageMap = {
-              '#panel_pro': '/images/edubg1.jpg',
-              '#panel_di': '/images/edubg2.jpg',
-              '#panel_net': '/images/edubg3.jpg',
-              '#panel_el': '/images/edubg4.jpg',
-              '#panel_5': '/images/edubg5.jpg'
+              '#panel_pro': '../images/edubg1.jpg',
+              '#panel_di': '../images/edubg2.jpg',
+              '#panel_net': '../images/edubg3.jpg',
+              '#panel_el': '../images/edubg4.jpg',
+              '#panel_5': '../images/edubg5.jpg'
           };
           $('#main_edu').css('background-image', 'url(' + bgImageMap[href] + ')');
       }
