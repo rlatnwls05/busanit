@@ -18,7 +18,7 @@
         <meta property="og:type" content="website"> 
         <meta property="og:title" content="부산IT교육센터·아카데미">
         <meta property="og:description" content="부산IT교육센터, 부산IT아카데미에서는 프로그래밍, 웹디자인, 전기, 네트워크 등 다양한 분야의 국가기간전략산업직종, 재직자, 일반 국비교육, 자격증 과정을 진행하고 있습니다.">
-        <meta property="og:url" content="https://wwww.busanit.ac.kr">
+        <meta property="og:url" content="https://www.busanit.ac.kr/">
     
     <link href="css/slick.css" rel="stylesheet">
     <link href="css/font.css" rel="stylesheet">
@@ -36,7 +36,14 @@
               <h1><a href="index.html"><img src="images/logo.png" alt="부산IT교육센터·아카데미"></a></h1>
               <nav>
                 <ul class="gnb">
-                  <li><a href="#main_edu">과정 안내</a></li>  
+                  <li>
+                    <a href="#main_edu">과정 안내</a>
+                    <ul class="sub-menu">
+                      <li><a href="#course1">프로그래밍·빅데이터</a></li>
+                      <li><a href="#course2">프로그래밍·빅데이터</a></li>
+                      <li><a href="#course3">프로그래밍·빅데이터</a></li>
+                    </ul>
+                  </li>  
                   <li><a href="#benefit">수강 혜택</a></li>
                   <li><a href="#main_support">취업 지원</a></li>
                   <li><a href=".jobCard">국비 지원</a></li>
@@ -49,7 +56,7 @@
                 <li><a href="tel:051-631-1175">광안캠퍼스 <span>051-631-1175</span></a></li>
               </ul>      
       
-              <div class="hg_but">
+              <div class="hg_but" id="toggleNav">
                   <span></span>
                   <span></span>
                   <span></span>
@@ -57,27 +64,55 @@
       
             </div><!-- inner -->
       
-      
-            <!-- <div class="mgnb_bg"></div>
-            <div class="mgnb_wrap">
-              <div class="inner">
-                <a href="index.html"><img src="images/logo.png" alt="부산IT교육센터·아카데미"></a>
-                <div class="close">
-                  <span></span>
-                  <span></span>
-                </div>
+            <div class="mobile-nav" id="mobileNav">
+              <div class="innerLong">
+                <h1><a href="index.html"><img src="images/logo.png" alt="부산IT교육센터·아카데미"></a></h1>
+                <!-- <div class="close-button" id="closeNav">✖</div> -->
               </div>
-              <nav>
-                <ul class="mgnb">
-                  <li><a href="#home-section">Home</a></li>
-                  <li><a href="#about_me">About me</a></li>
-                  <li><a href="#web_project">Web_Project</a></li>
-                  <li><a href="#graphic_project">Graphic_Project</a></li>
-                </ul>
-              </nav>
-      
-            </div> -->
+              <ul class="gnb-mobile">
+                  <li>
+                    <a href="#main_edu">과정 안내</a>
+                    <ul class="sub-menu">
+                      <li><a href="#course1">프로그래밍·빅데이터</a></li>
+                      <li><a href="#course2">프로그래밍·빅데이터</a></li>
+                      <li><a href="#course3">프로그래밍·빅데이터</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#benefit">수강 혜택</a></li>
+                  <li><a href="#main_support">취업 지원</a></li>
+                  <li><a href=".jobCard">국비 지원</a></li>
+                  <li><a href="#mainMap">오시는 길</a></li>
+              </ul>
+            </div>
+
           </header>
+          <script>
+            const header = $('header');
+            const originalOffset = header.offset().top; // 원래 위치
+
+            $(window).on('scroll', function() {
+              if ($(this).scrollTop() > 100) { // 100px 스크롤 시
+                header.addClass('fixed');
+              } else {
+                header.removeClass('fixed');
+              }
+            });
+
+            $('#toggleNav').on('click', function() {
+              const mobileNav = $('#mobileNav');
+              
+              if (mobileNav.is(':visible')) {
+                // 슬라이드 업 애니메이션
+                mobileNav.animate({ top: '-100%', opacity: 0 }, 300, function() {
+                  mobileNav.css('display', 'none'); // 애니메이션 후 숨김
+                });
+              } else {
+                // 슬라이드 다운 애니메이션
+                mobileNav.css({ display: 'block', top: '-100%', opacity: 0 }); // 초기 상태 설정
+                mobileNav.animate({ top: '0', opacity: 1 }, 300); // 애니메이션
+              }
+            });
+          </script>
 
           <main>
             <section id="main_banner">
@@ -158,7 +193,7 @@
                       <h3 class="script_s">사용되는 프로그램</h3>
                       <p>포토샵, 일러스트레이터, HTML, CSS, Javascript, 프리미어, 메타버스 등</p>
                     </div>
-                    <a href="#" class="moreBut"><span>지원하기</span></a>
+                    <a href="https://btc.ac.kr/p/?j=176" class="moreBut"><span>지원하기</span></a>
                   </article>
                   <article id="panel_net">
                     <h1 class="mainTitle">네트워크·클라우드<span class="eduCam_sy">부산IT아카데미</span></h1>
@@ -177,7 +212,7 @@
                       <h3 class="script_s">사용되는 프로그램</h3>
                       <p>리눅스, AWS 클라우드, 네트워킹, 모의해킹, CCNA/CCNP 등</p>
                     </div>
-                    <a href="#" class="moreBut"><span>지원하기</span></a>
+                    <a href="https://btc.ac.kr/p/?j=183" class="moreBut"><span>지원하기</span></a>
                   </article>
                   <article id="panel_el">
                     <h1 class="mainTitle">전기·자동제어<span class="eduCam_sy">부산IT아카데미</span></h1>
@@ -196,7 +231,7 @@
                       <h3 class="script_s">사용되는 프로그램</h3>
                       <p>전기 배선, PLC, 랩뷰, 전기기능사, 자동제어 시스템 등</p>
                     </div>
-                    <a href="#" class="moreBut"><span>지원하기</span></a>
+                    <a href="https://btc.ac.kr/p/?j=190" class="moreBut"><span>지원하기</span></a>
                   </article>
                   <article id="panel_5">
                     <h1 class="mainTitle">전산회계<span class="eduCam_sy">부산IT아카데미</span></h1>
@@ -210,7 +245,7 @@
                         <dd>전문대학 졸업수준의 <mark>재무회계와 원가회계, 세무회계(소득세,부가 가치세)에 관한 지식</mark>을 갖추고, 기업체의 세무회계 책임자로서 <mark>전산세무회계프로그램을 활용한 세무회계 전반의 실무처리 업무를 수행할 수 있는지에 대한 능력을 평가</mark>합니다.</dd>
                       </dl>
                     </div>
-                    <a href="#" class="moreBut"><span>지원하기</span></a>
+                    <a href="https://btc.ac.kr/p/?j=202" class="moreBut"><span>지원하기</span></a>
                   </article>
                 </div>
               </div>
@@ -235,7 +270,7 @@
                 <p class="mainTitle_P">The place where you go beyond your past and shape your future self</p>
                 <div class="main_pf_set">
                   <article>
-                    <a href="http://58.239.58.243:40100/202401/index.html">
+                    <a href="http://58.239.58.243:40100/202401/index.html" target="_blank">
                       <img src="images/port_1.jpg" alt="디자인 과정 포트폴리오">
                       <div class="Pf_title_bg"> 
                         <p class="Pf_title"><span>WEB DESIGN</span>포트폴리오 - 오**</p>
@@ -244,7 +279,7 @@
                     </a>
                   </article>
                   <article>
-                    <a href="#">
+                    <a href="http://58.239.58.243:40100/bx/003.jpg" target="_blank">
                       <img src="images/port_2.jpg" alt="디자인 과정 포트폴리오">
                       <div class="Pf_title_bg"> 
                         <p class="Pf_title"><span>BX 디자인</span>Daytrip - 이**</p>
@@ -253,7 +288,7 @@
                     </a>
                   </article>
                   <article>
-                    <a href="#">
+                    <a href="http://58.239.58.243:40100/bx/002.jpg"target="_blank">
                       <img src="images/port_3.jpg" alt="디자인 과정 포트폴리오">
                       <div class="Pf_title_bg"> 
                         <p class="Pf_title"><span>BX 디자인</span>감동한의원 - 맹**</p>
@@ -262,7 +297,7 @@
                     </a>
                   </article>
                   <article>
-                    <a href="#">
+                    <a href="http://58.239.58.243:40100/bx/001.jpg" target="_blank">
                       <img src="images/port_4.jpg" alt="디자인 과정 포트폴리오">
                       <div class="Pf_title_bg"> 
                         <p class="Pf_title"><span>BX 디자인</span>남도주류 - 이**</p>
@@ -271,7 +306,7 @@
                     </a>
                   </article>
                   <article>
-                    <a href="#">
+                    <a href="http://58.239.58.243:40100/app/03.pdf" target="_blank">
                       <img src="images/port_5.jpg" alt="디자인 과정 포트폴리오">
                       <div class="Pf_title_bg"> 
                         <p class="Pf_title"><span>APP 디자인</span>MA EAT DA - 최**</p>
@@ -280,7 +315,7 @@
                     </a>
                   </article>
                   <article>
-                    <a href="#">
+                    <a href="http://58.239.58.243:40100/app/02.pdf" target="_blank">
                       <img src="images/port_6.jpg" alt="디자인 과정 포트폴리오">
                       <div class="Pf_title_bg"> 
                         <p class="Pf_title"><span>APP 디자인</span>ICERM - 김**</p>
@@ -289,7 +324,7 @@
                     </a>
                   </article>
                   <article>
-                    <a href="#">
+                    <a href="http://58.239.58.243:40100/app/01.pdf" target="_blank">
                       <img src="images/port_7.jpg" alt="디자인 과정 포트폴리오">
                       <div class="Pf_title_bg"> 
                         <p class="Pf_title"><span>APP 디자인</span>DALNARA - 김**</p>
@@ -298,7 +333,7 @@
                     </a>
                   </article>
                   <article>
-                    <a href="#">
+                    <a href="http://58.239.58.243:40100/202205/index.html" target="_blank">
                       <img src="images/port_8.jpg" alt="디자인 과정 포트폴리오">
                       <div class="Pf_title_bg"> 
                         <p class="Pf_title"><span>WEB DESIGN</span>포트폴리오 - 진**</p>
@@ -307,8 +342,17 @@
                     </a>
                   </article>
                   <article>
-                    <a href="#">
+                    <a href="http://58.239.58.243:40100/202203/index.html" target="_blank">
                       <img src="images/port_9.jpg" alt="디자인 과정 포트폴리오">
+                      <div class="Pf_title_bg"> 
+                        <p class="Pf_title"><span>WEB DESIGN</span>포트폴리오 - 김**</p>
+                        <P class="view_count">👀 1,179</P>
+                      </div>
+                    </a>
+                  </article>
+                  <article>
+                    <a href="http://58.239.58.243:40100/202203/index.html" target="_blank">
+                      <img src="images/port_10.jpg" alt="디자인 과정 포트폴리오">
                       <div class="Pf_title_bg"> 
                         <p class="Pf_title"><span>WEB DESIGN</span>포트폴리오 - 추**</p>
                         <P class="view_count">👀 1,179</P>
@@ -316,8 +360,8 @@
                     </a>
                   </article>
                   <article>
-                    <a href="#">
-                      <img src="images/port_10.jpg" alt="디자인 과정 포트폴리오">
+                    <a href="http://58.239.58.243:40100/202202/index.html" target="_blank">
+                      <img src="images/port_11.jpg" alt="디자인 과정 포트폴리오">
                       <div class="Pf_title_bg"> 
                         <p class="Pf_title"><span>WEB DESIGN</span>포트폴리오 - 이**</p>
                         <P class="view_count">👀 1,179</P>
@@ -325,25 +369,16 @@
                     </a>
                   </article>
                   <article>
-                    <a href="#">
-                      <img src="images/port_11.jpg" alt="디자인 과정 포트폴리오">
+                    <a href="http://58.239.58.243:40100/202201/index.html" target="_blank">
+                      <img src="images/port_12.jpg" alt="디자인 과정 포트폴리오">
                       <div class="Pf_title_bg"> 
                         <p class="Pf_title"><span>WEB DESIGN</span>포트폴리오 - 맹**</p>
                         <P class="view_count">👀 1,179</P>
                       </div>
                     </a>
                   </article>
-                  <article>
-                    <a href="#">
-                      <img src="images/port_12.jpg" alt="디자인 과정 포트폴리오">
-                      <div class="Pf_title_bg"> 
-                        <p class="Pf_title"><span>WEB DESIGN</span>포트폴리오 - 오**</p>
-                        <P class="view_count">👀 1,179</P>
-                      </div>
-                    </a>
-                  </article>
                 </div>
-                <a href="https://btc.ac.kr/p/?j=180" class="moreBut"><span>MORE VIEW</span></a>
+                <a href="https://btc.ac.kr/p/?j=180" target="_blank" class="moreBut"><span>MORE VIEW</span></a>
               </div>
             </section>
 
@@ -541,7 +576,151 @@
 <!-- 모달에 표시할 내용 -->
 <div id="content" style="display: none;">
   <div id="intro">훈련기관 소개 내용</div>
-  <div id="policy">개인정보처리방침 내용</div>
+  <div id="policy">
+    <dl>
+      <dt>개인정보처리방침 내용</dt>
+      <dd>
+        <pre><span><strong>'(재)부산인재개발원' (이하 (재)부산인재개발원 이라 함)은 귀하의 개인정보보호를 매우 중요시하며, 『개인정보보호법』을 준수하고
+          있습니다. (재)부산인재개발원은 개인정보처리방침을 통하여 귀하께서 제공하시는 개인정보가 어떠한 용도와 방식으로 이용되고
+          있으며, 개인정보보호를 위해 어떠한 조치가 취해지고 있는지 알려드립니다.
+          </strong>
+          이 개인정보처리방침의 순서는 다음과 같습니다.
+            1. 수집하는 개인정보의 항목 및 수집방법
+            2. 개인정보의 수집 및 이용목적
+            3. 개인정보의 보유 및 이용기간
+            4. 개인정보의 파기절차 및 그 방법
+            5. 개인정보 제3자 제공 및 공유
+            6. 수집한 개인정보의 취급위탁
+            8. 동의철회 / 회원탈퇴 방법
+            9. 개인정보 자동 수집 장치의 설치/운영 및 그 거부에 관한 사항
+            10. 개인정보보호책임자
+            11. 정책 변경에 따른 공지의무
+          
+          <strong>1. 수집하는 개인정보의 항목</strong>
+          
+          회원가입 시 필수항목과 선택항목이 있으며, 메일수신여부 등과 같은 선택항목은 동의하지 않으시더라도,
+          서비스 이용에는 제한이 없습니다.
+          
+          <strong>[홈페이지 개인정보 수집항목]</strong>
+          필수 항목 : 이름, 생년월일, 성별, 로그인 아이디, 비밀번호, 유선전화번호, 휴대폰 번호, 이메일 (기업회원의 경우) 회사명, 사업자번호, 대표자명
+          선택 항목 : 별명 등 일부 정보
+          서비스 이용 관정이나 서비스 제공 업무 처리 과정에서 다음 정보들이 자동으로 생성되어 수집될 수 있습니다. 
+          서비스 이용기록, 접속 로그, 쿠키, 접속 IP정보
+          
+          <strong>[개인정보 수집방법]</strong>
+          
+          다음과 같은 방법으로 개인정보를 수집합니다.: 홈페이지 회원가입, 홈페이지 게시판
+          
+          <strong>2. 개인정보의 수집 및 이용목적</strong>
+          
+          
+          (재)부산인재개발원은 수집한 개인정보를 다음의 목적을 위해 활용합니다.
+          
+          이용자가 제공한 모든 정보는 하기 목적에 필요한 용도 이외로는 사용되지 않으며 이용 목적이 변경될 시에는
+          사전 동의를 구할 것입니다.
+          
+          이름, 생년월일, 성별, 연락처, 이메일, 로그인 아이디ㆍ비밀번호 : 서비스 이용에 따른 회원가입 및 본인 식별에 이용,
+          게시판 내 게시글 등록 및 확인(수정,삭제), 조회 및 회원제 서비스 제공
+          이메일(메일링), SMS 서비스 수신 여부 : 소식 및 고지사항 전달, 불만처리 등을 위한 원활한 의사소통 경로의 확보, 상담 답변
+          
+          <strong>3. 개인정보의 보유 및 이용기간</strong>
+          
+          (재)부산인재개발원은 개인정보의 수집목적 또는 제공받은 목적이 달성된 때에는 귀하의 개인정보를 지체 없이 파기합니다.
+          
+          다만, 수집목적 또는 제공받은 목적이 달성된 경우에도 상법 등 법령의 규정에 의하여 보존할 필요성이 있는 경우에는
+          귀한의 개인정보를 보유할 수 있습니다.
+          
+            소비자의 불만 또는 분쟁처리에 관한 기록 : 3년 (전자상거래 등에서의 소비자보호에 관한 법률)
+            신용정보의 수집/처리 및 이용 등에 관한 기록 : 3년 (신용정보의 이용 및 보호에 관한 법률)
+            본인 확인에 관한 기록 : 6개월 (정보통신망 이용촉진 및 정보보호 등에 관한 법률)
+            방문에 관한 기록 : 3개월 (통신비밀보호법)
+          
+          <strong>4. 개인정보의 파기 절차 및 방법</strong>
+          
+          <strong>파기절차</strong>
+            이용자가 회원가입 등을 위해 입력한 정보는 목적이 달성된 후 파기방법에 의하여 즉시 파기합니다.
+          <strong>파기방법</strong>
+            전자적 파일형태로 저장된 개인정보는 기록을 재생할 수 없는 기술적 방법을 사용하여 삭제합니다.
+            종이에 출력된 개인정보는 분쇄기로 분쇄하거나 소각을 통하여 파기합니다.
+          
+          <strong>5. 개인정보 제3제공 및 공유</strong>
+          
+          (재)부산인재개발원은 귀하의 동의가 있거나 관련법령의 규정에 의한 경우를 제외하고는 어떠한 경우에도
+          『개인정보의 수집 및 이용목적』에서 고지한 범위를 넘어 귀하의 개인정보를 이용 및 타인 또는 타기업ㆍ기관에 제공하지 않습니다.
+          
+          다만, 고객의 동의가 있거나 다음과 같은 사례에 해당하는 경우에는 예외로 합니다.
+          
+          통계작성ㆍ학술연구를 위하여 필요한 경우 특정 개인을 알아볼 수 없는 형태로 가공하여 제공
+          법령에 정해진 절차와 방법에 따라 수사기관의 요구가 있는 경우 제공
+          
+          <strong>6. 수집한 개인정보의 취급위탁</strong>
+          
+          (재)부산인재개발원은 고객님의 동의없이 고객님의 정보를 외부 업체에 위탁하지 않습니다. 향후 그러한 필요가 생길 경우,
+          위탁 대상자와 위탁 업무 내용에 대해 고객님에게 통지하고 필요한 경우 사전 동의를 받도록 하겠습니다.
+          
+          <strong>이용자 및 법정대리인의 권리와 그 행사방법</strong>
+          
+          이용자는 언제든지 등록되어 있는 자신의 개인정보를 조회하거나 수정할 수 있으며 가입해지를 요청할 수도 있습니다.
+          이용자들의 개인정보 조회,수정을 위해서는 '개인정보변경'(또는 '회원정보수정' 등)을 가입해지(동의철회)를 위해서는
+          당사의 사이트에 로그인 후, "회원 &gt; 회원정보수정"에 회원탈퇴 버튼을 클릭하여 본인 확인 절차를 거치신 후 직접 열람, 정정
+          또는 탈퇴가 가능합니다. 혹은 개인정보관리책임자에게 서면, 전화 또는 이메일로 연락하시면 지체없이 조치하겠습니다.
+          
+          귀하가 개인정보의 오류에 대한 정정을 요청하신 경우에는 정정을 완료하기 전까지 당해 개인정보를 이용 또는 제공하지 않습니다.
+          또한 잘못된 개인정보를 제3자에게 이미 제공한 경우에는 정정 처리결과를 제3자에게 지체없이 통지, 정정이 이루어지도록 하겠습니다.
+          (재)부산인재개발원은 이용자의 요청에 의해 해지 또는 삭제된 개인정보는 "(재)부산인재개발원이 수집하는 개인정보의 보유 및
+          이용기간"에 명시된 바에 따라 처리하고 그 외의 용도로 열람 또는 이용할 수 없도록 처리하고 있습니다.
+          
+          <strong>7. 동의를 거부할 권리가 있다는 사실 및 동의 거부에 따른 불이익 내용</strong>
+          
+          귀하는 홈페이지에서 개인정보 수집에 대한 동의를 거부할 권리가 있습니다.그러나 동의를 거부할 경우 회원가입이 진행되지 않으며,
+          특정 게시판(또는 특정 페이지)에 접근 제한이 있을 수 있습니다. 이는 특정 게시판(또는 특정 페이지)으로의 접근에만 제한이
+          있을 뿐이며 홈페이지 이용에는 제한이 없습니다.
+          
+          <strong>8. 회원탈퇴 방법</strong>
+          
+          귀하는 회원가입 시 개인정보의 수집ㆍ이용 및 제공에 대해 동의하신 내용을 언제든지 철회하실 수 있습니다. 회원탈퇴
+           (재)부산인재개발원 홈페이지에서 로그인하신 후, member info 페이지에서 『회원탈퇴』를 클릭하여 본인 확인 절차를 거치신 후
+          직접 회원탈퇴를 하시거나, 개인정보보호책임자에게 서면, 전화 또는 이메일 등으로 연락하시면 지체 없이 귀하의 개인정보를
+          파기하는 등 필요한 조치를 하겠습니다.
+          
+          <strong>9. 개인정보 자동 수집 장치의 설치/운영 및 그 거부에 관한 사항</strong>
+          
+          (재)부산인재개발원은 귀하의 정보를 수시로 저장하고 찾아내는 '쿠키(cookie)'를 운용합니다. 쿠키란 (재)부산인재개발원의
+          웹사이트를 운영하는데 이용되는 서버가 귀하의 브라우저에 보내는 아주 작은 텍스트 파일로서 귀하의 컴퓨터 하드디스크에
+          저장됩니다. (재)부산인재개발원은 다음과 같은 목적을 위해 쿠키를 사용합니다.
+          귀하는 쿠키 설치에 대한 선택권을 가지고 있습니다. 따라서, 귀하는 웹 브라우저에서 옵션을 설정함으로써 모든 쿠키를 허용하거나
+           쿠키가 저장될 때마다 확인을 거치거나, 아니면 모든 쿠키의 저장을 거부할 수도 있습니다.
+          회원님께서 쿠키 설치를 거부하셨을 경우 일부 서비스 제공에 어려움이 있습니다.
+          
+          <strong>10. 개인정보보호책임자</strong>
+          
+          귀하의 개인정보를 보호하고 개인정보와 관련한 불만을 처리하기 위하여 (재)부산인재개발원은 아래와 같이
+          개인정보보호책임자를 두고 있습니다.
+          
+          <strong>[개인정보보호 책임자]</strong>
+              소속 : (재)부산인재개발원
+              전화번호 : 051-753-5600
+          
+          귀하께서는 (재)부산인재개발원의 서비스를 이용하시며 발생하는 모든 개인정보보호 관련 민원을 개인정보보호책임자로
+          신고하실 수 있습니다. (재)부산인재개발원은 이용자들의 신고사항에 대해 신속하게 충분한 답변을 드릴 것입니다.
+          기타 개인정보침해에 대한 신고나 상담이 필요하신 경우에는 아래 기관에 문의하시기 바랍니다.
+          
+              개인분쟁조정위원회 (www.1336.or.kr/1336)
+              정보보호마크인증위원회 (www.eprivacy.or.kr/02-580-0533~4)
+              대검찰청 인터넷범죄수사센터 (http://icic.sppo.go.kr/02-3480-3600)
+              경찰청 사이버테러대응센터 (www.ctrc.go.kr/02-392-0330)
+          
+          <strong>11. 정책 변경에 따른 공지의무</strong>
+          
+          이 개인정보취급방침은 2013년 03월 25일에 제정되었으며 법령ㆍ정책 또는 보안기술의 변경에 따라 내용의 추가ㆍ삭제 및 수정이
+          있을 시에는 변경되는 개인정보취급방침을 시행하기 전에 (재)부산인재개발원 홈페이지를 통해 변경이유 및 내용 등을 공지하겠습니다.
+          
+              공고일자 : 2017 년  12 월 28 일
+              시행일자 : 2017 년  12 월 28 일</span></pre>
+      </dd>
+    </dl>
+    
+  </div>
   <div id="refusal">메일주소무단수집거부 내용</div>
   <div id="location">오시는 길 내용</div>
 </div>
@@ -560,33 +739,25 @@
   </script>
               
 
-    <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=ijyrttr90t"></script>
-    <script>
-      var mapDiv = document.getElementById('map1');
-      var mapOptions = {
-          center: new naver.maps.LatLng(35.1559905, 129.0595791),
-          zoom: 17
-      };
-      var map = new naver.maps.Map('map1', mapOptions);
-          
-      var marker = new naver.maps.Marker({
-          position: new naver.maps.LatLng(35.1559905, 129.0595791),
-          map: map
-      });
-    </script>
-    <script>
-      var mapDiv = document.getElementById('map2');
-      var mapOptions = {
-          center: new naver.maps.LatLng(35.1484622, 129.1134463),
-          zoom: 17
-      };
-      var map = new naver.maps.Map('map2', mapOptions);
-          
-      var marker = new naver.maps.Marker({
-          position: new naver.maps.LatLng(35.1484622, 129.1134463),
-          map: map
-      });
-      </script>
+              <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=ijyrttr90t"></script>
+              <script>
+                function initializeMap(mapId, lat, lng) {
+                  var mapOptions = {
+                    center: new naver.maps.LatLng(lat, lng),
+                    zoom: 17
+                  };
+                  var map = new naver.maps.Map(mapId, mapOptions);
+                  
+                  new naver.maps.Marker({
+                    position: new naver.maps.LatLng(lat, lng),
+                    map: map
+                  });
+                }
+            
+                // 각 캠퍼스의 좌표를 설정
+                initializeMap('map1', 35.1559905, 129.0595791); // 서면캠퍼스
+                initializeMap('map2', 35.1484622, 129.1134463); // 광안캠퍼스
+              </script>
 
 
     
