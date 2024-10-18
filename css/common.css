@@ -41,7 +41,6 @@ header {
   position: relative;
   top: 0;   left: 0;  right: 0;  z-index: 1000;
   background-color: rgba(255, 255, 255, 0.95);
-  
   transition: top 0.3s ease; /* 부드러운 전환 효과 */
 }
 
@@ -118,7 +117,6 @@ header .gnb > li:hover > a {font-family: 'Gmarket_B';
   top: -100%; 
   left: 0;
   width: 100%;
-  height: 100%; /* 전체 화면 */
   background-color: rgba(255, 255, 255, 0.95);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   z-index: 1000;
@@ -140,6 +138,7 @@ header .gnb > li:hover > a {font-family: 'Gmarket_B';
 }
 
 .gnb-mobile {
+  text-align: center;
   width: 80%;
   list-style: none;
   padding: 20px;
@@ -256,7 +255,6 @@ p.view_count{font-family: 'Gmarket_L'; right: 20px; margin-left: 10px; display: 
 
 
 /* main_support */
-article.jobSupport{}
 .jobSystem_wrap{display: flex; justify-content: space-around; margin-top: 30px;}
 .jobSystem_wrap dl{flex-grow: 1; border-radius: 20px; overflow: hidden; box-shadow: 2px 4px 15px 0px rgba(0, 0, 0, 0.25); padding-bottom: 20px;}
 .jobSystem_wrap dt{font-family: 'Gmarket_B'; font-size: 1.3rem; background-color: #030755; color: #fff; padding: 20px 30px 15px; margin-bottom: 15px;}
@@ -268,10 +266,10 @@ article.jobSupport{}
 
 .line_dot{width: 55px; margin: 0 1%; background:url(../images/dot.png) repeat-x center;}
 
-article.jobCenter{text-align: center; margin-top: 50px; background: linear-gradient(0deg , transparent 300px, #C4A7FE 0);}
-article.jobCenter .innerShort{background-image: url(../images/counselor.png); background-repeat: no-repeat; background-position: 20px 120px;}
+article.jobCenter{text-align: center; margin-top: 50px; background: linear-gradient(0deg , transparent 150px, #C4A7FE 0);}
+/* article.jobCenter .innerShort{background-image: url(../images/counselor.png); background-repeat: no-repeat; background-position: 20px 120px;}
 .jobCenter_Icon{ display: inline-block; padding-right: 150px; padding-top: 70px; background: url(../images/jobbox.png) no-repeat; background-position: right top; background-size: 430px;     margin-bottom: 80px;}
-.jobCenter_Icon h4, .jobCenter_Icon h1{display: inline; color: #fff; margin-left: 20px;}
+.jobCenter_Icon h4, .jobCenter_Icon h1{display: inline; color: #fff; margin-left: 20px;} */
 
 .jobCenter_call li{margin: 10px;}
 .jobCenter_call li a{font-size: 50px; font-family: 'Gmarket_B';}
@@ -279,10 +277,10 @@ article.jobCenter .innerShort{background-image: url(../images/counselor.png); ba
 
 .jobCenter_call li:hover a span{ filter: invert(1);}
 
-.jobCard{ text-align: center; background: linear-gradient(180deg , transparent 300px, #F5F5F5  0 );}
-.jobCard .innerShort{padding-top: 0;}
-.jobCard .innerShort > div {margin-top: 30px;}
-.jobCard h1{ font-size: 30px; margin-top: 100px;}
+#jobCard{ text-align: center; background: linear-gradient(180deg , transparent 300px, #F5F5F5  0 );}
+#jobCard .innerShort{padding-top: 0;}
+#jobCard .innerShort > div {margin-top: 30px;}
+#jobCard h1{ font-size: 30px; margin-top: 100px;}
 
 
 .candidate_wrap{display: flex; flex-wrap: wrap; justify-content: space-around; text-align: left; margin: 20px 0 50px;}
@@ -354,7 +352,7 @@ footer .f_menu a{margin-right: 20px;}
   overflow: scroll;
 }
 
-.modal-content dt{background: #030755; color: #fff; padding: 10px;}
+.modal-content dt{border-bottom: 1px solid #030755;}
 
 .close {
   color: #aaa;
@@ -374,15 +372,15 @@ footer .f_menu a{margin-right: 20px;}
 
 /* 반응형 */
 
-@media all and (max-width:1919px){
+@media all and (max-width:1920px){
   .innerLong { width: calc(100% - 80px);}
 }
 
-@media all and (max-width:1499px){
+@media all and (max-width:1500px){
   .candidate_wrap > div:last-child{margin-top: 20px;}
 }
 
-@media all and (max-width:1399px){
+@media all and (max-width:1400px){
     /* quick */
   #quick_wrap{right: 40px;}
 
@@ -393,12 +391,12 @@ footer .f_menu a{margin-right: 20px;}
   header .h_call a span {font-family: 'Gmarket_B'; font-size: 16px; line-height: 18px;}
 
    /* main_edu */
-   #main_edu .innerLong{display: block;}
-   .tab_set {width: 90%; margin: 0 auto; }
-   .tab_set h2{text-align: left;}
-   .tab_set .tab{ display: flex; justify-content: start; flex-wrap: wrap; margin-bottom: 30px; }
-   .tab_set .tab li{width: 30%; margin: 5px 1.5%;}
-   .tab_set .tab li a{width: 100%; height: 50px; line-height: 53px;}
+  #main_edu .innerLong{display: block;}
+  .tab_set {width: 90%; margin: 0 auto; }
+  .tab_set h2{text-align: left;}
+  .tab_set .tab{ display: flex; justify-content: start; flex-wrap: wrap; margin-bottom: 30px; }
+  .tab_set .tab li{width: 30%; margin: 5px 1.5%;}
+  .tab_set .tab li a{width: 100%; height: 50px; line-height: 53px;}
   .panels_set { width: 90%; margin: 0 auto;}
   .panels_set article > div{width: 95%;}
 
@@ -411,17 +409,19 @@ footer .f_menu a{margin-right: 20px;}
 }
 
 
-@media all and (max-width:1023px){
+@media all and (max-width:1024px){
   .innerLong { width: calc(100% - 60px);}
   .innerShort {width: 90%;}
   * section .del_Pc {display: none;}
-  * section .del_Tablet{display: block; margin: 0 auto;}
+  * section .del_Tablet{display: block; margin: 50px auto 0;}
 
     /* header */
   header .innerLong {height: 100px;}
   header nav .gnb{display: none;}
   
   .hg_but{display: block;}
+
+  .gnb-mobile{width: 100%;}
 
     /* main_banner */
   #main_banner .numcount{left: 60px;}
@@ -433,68 +433,127 @@ footer .f_menu a{margin-right: 20px;}
 
     /* main_portfolio */
   .main_pf_set article:nth-child(n+9){display: none;}
+
+  /* main_support */
+  article.jobCenter{text-align: center; margin-top: 50px; background: #C4A7FE ;}
 }
 
-@media all and (max-width:779px){
+@media all and (max-width:780px){
 
   .script::before{font-size: 1.3em;}
 
+  /* Benefit */
+  .mainTitle_Icon{padding-left: 0px; background-position: left top; background-size: 77px; padding-top: 100px;}
+
   /* main_support */
-  article.jobCenter{background: linear-gradient(0deg , transparent 430px, #C4A7FE 0);}
+  article.jobCenter{background:  #C4A7FE ;}
   .jobCenter_call{margin-top: 60px;}
   .jobCenter_call li a span{display: block; margin: 0 auto; margin-bottom: 10px;}
 
+    /* footer */
+    footer .f_campus {display: block;}
+    footer .f_campus dl{margin-bottom: 50px;}
 }
 
-@media all and (max-width:599px){
+@media all and (max-width:600px){
+
+  header .innerLong {height: 70px;}
+  .mainTitle {font-size: 2rem; font-family: 'Gmarket_B';}
+  .mainTitle_L {font-size: 1.8rem;}
   .script::before{font-size: 3rem;}
+  .mainTitle_P {font-family: "Raleway", sans-serif; margin-top: 20px;}
+  .mainSubTitle{font-size: 0.8rem;} 
+  .moreBut span{font-size: 1rem;}
 
   /* quick */
   #quick_wrap {
-    max-width: 80px;
-    right: 20px;
-    bottom: 120px;
-  }
+    max-width: 80px;   right: 20px;   bottom: 120px;  }
 
-  #quick_section {
-    padding: 7.5px;
-  }
-  
-  #quick_section a {
-    font-size: 0.7rem;
-  }
-
-  #top_btn {
-    height: 44px;
-    margin-top: 10px;
-    border-radius: 5px;
-  }
+  #quick_section {    padding: 7.5px;  }
+  #quick_section a {    font-size: 0.7rem;  }
+  #top_btn {    height: 44px;    margin-top: 10px;    border-radius: 5px;  }
 
     /* header */
   header .h_call{display: none;}
+  .gnb-mobile{display: block; text-align: left;}
+  .gnb-mobile > li > a{font-family: 'Gmarket_M';}
+  
+
+  
+
+  /* main_edu */
+  .tab_set .tab{justify-content: space-between;}
+  .tab_set .tab li{width: 48%;}
+  .tab_set .tab li a{font-size: 1rem;}
+  .panels_set{width: 100%;}
+  .panels_set article{padding: 30px 40px;}
+  .panels_set article h1 span{display: none;}
+
+  .panels_set article .moreBut {text-align: start;}
+
+  /* main_support */
+  .candidate_wrap{display: block;}
+  .candidate_wrap> div{ display: block; width: 100%; height: auto; padding: 40px;}
+  .candidate_wrap > div img{margin-bottom: 30px;}
+
+  /* mainMap */
+  .mapSet article{display: block; margin-top: 50px;}
+  .mapSet .map_iframe{width: 100%; height: 360PX; margin: 0 auto;}
+  .mapSet .maptext{ width: 100%; position: static; margin: 30px auto;}
+  .mapSet .maptext dl{position: static;}
+  .mapSet .maptext dt img{display: block;}
+
 }
 
-@media all and (max-width:479px){
-  .innerLong { width: calc(100% - 10px); }
+@media all and (max-width:480px){
+
+  .innerLong { width: calc(100% - 30px); }
+  .innerShort {width: 80%; margin: 0 auto; padding: 100px 0 80px;}
+  
   * section .del_Tablet {display: none;}
-  * section .del_Moble {display: block;}
+  * section .del_Moble {display: block; margin: 50px auto 0;}
+  .script::before{font-size: 2.5rem;}
 
     /* header */
   header .innerLong {height: 70px;}
 
     /* main_banner */
+    .panels_set article h1 span{}
+
+      /* main_edu */
+    .tab_set {width: 100%;}
+    .tab_set .tab{justify-content: space-between;}
+    .tab_set .tab li{width: 49%;}
+    .tab_set .tab li a{font-size: 1rem; height: 40px; line-height: 43px;}
+    
 
     /* main_portfolio */
   .main_pf_set article{width: 90%; margin: 10px auto;}
   .main_pf_set article:nth-child(n+5){display: none;}
 
     /* main_support */
+    .jobSystem_wrap dt span{font-size: 0.9rem;}
   .line_dot{width: 100%;}
+  .jobCenter_call li a{font-size: 2.5rem;}
+  .jobCenter_call li a span{font-size: 0.9rem; width: 90%; }
   
 }
 
 
 
 @media (max-width: 360px) {
+  .innerShort { width: 90%;}
+  .script::before {
+    font-size: 1.3em;
+    margin-top: 0px;
+    max-width: 360px;
+    width: 100%;
+}
 
+
+  /* main_support */
+  #jobCard h1{font-size: 1.4rem;}
+  .line_dot{width: 100%;}
+  .jobCenter_call li a{font-size: 2.3rem;}
+  .jobCenter_call li a span{font-size: 0.9rem; width: 100%; }
 }
